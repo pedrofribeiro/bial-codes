@@ -12,7 +12,9 @@ using namespace std;
 
 int main(int argc, char* argv[]){
 
-//holds the min and max values of the image
+//holds: the min and max values of the image
+//the upperBound and lowerBound values provided by the user
+//the ranges from both pairs of extreme values
 int min = 0, max = 0, upperBound = 0, lowerBound = 0, rangeOfImage = 0, rangeOfBounds = 0;
 
 if(argc != 5){
@@ -28,7 +30,7 @@ Image<int> imA( Read<int>( argv[1] ) );
 for(size_t t = 0; t < imA.size(); ++t){
   if( imA[t] < min ){
     min = imA[t];
-    break; //no need to further compare within this iteration.
+    continue; //no need to further compare within this iteration.
   }
   if( imA[t] > max ){
     max = imA[t];
