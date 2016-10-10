@@ -16,6 +16,7 @@ int main(int argc, char* argv[]){
 if (argc != 3) {
   cout << "Not enough arguments provided.\n" << endl;
   cout << "The input should be of the form: <img1> <newImg>" << endl;
+  return (0);
 }
 
 //read the image from the user's input
