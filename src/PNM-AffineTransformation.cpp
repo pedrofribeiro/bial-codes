@@ -19,12 +19,13 @@ int main(int argc, char* argv[]){
 
 
   if(argc != 3){
-    cout << "Insufficient number of parameters given to the function.\n" << endl;
-    cout << "The input should be of the form: <img>\n" << endl;
+    cout << "Insufficient number of parameters given to the function." << endl;
+    cout << "The input should be of the form: <img> <out>" << endl;
+    return( 0 );
   }
 
   //reading the image from the user input
-  Image<int> imA( Read<int>(argv[0]) );
+  Image<int> imA( Read<int>(argv[1]) );
 
   //dimension's control variables for the new, extended, image
   //translation variable, pondered by the extension
@@ -61,5 +62,7 @@ int main(int argc, char* argv[]){
     }
   }
 
+  Write(imB, argv[2]);
 
+  return(0);
 }
